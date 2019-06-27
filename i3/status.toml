@@ -28,8 +28,9 @@ interval = 1
 format = "{1m}"
 
 [[block]]
-block = "bluetooth"
-mac = "8C:DE:52:17:39:F5"
+block = "nvidia_gpu"
+label = "GPU"
+show_memory = false
 
 [[block]]
 block = "music"
@@ -41,15 +42,23 @@ block = "sound"
 
 [[block]]
 block = "net"
-device = "wlp2s0"
+device = "wlp3s0"
 ssid = true
 ip = false
-speed_up = true
-speed_down = true
+speed_up = false
+speed_down = false
 interval = 5
 
 [[block]]
-device ="BAT1"
+block = "net"
+device = "eno1"
+ssid = true
+speed_up = false
+speed_down = false
+
+
+[[block]]
+device ="BAT0"
 block = "battery"
 interval = 10
 upower =  true
@@ -58,4 +67,5 @@ format = "{percentage}% {time}"
 [[block]]
 block = "time"
 interval = 60
+timezone = "GMT"
 format = "%a %d/%m %R"
